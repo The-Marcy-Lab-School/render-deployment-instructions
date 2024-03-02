@@ -4,10 +4,8 @@
 - [Overview](#overview)
   - [Render vs. Github Pages](#render-vs-github-pages)
   - [Create An Account](#create-an-account)
-- [A simple backend app](#a-simple-backend-app)
-- [A more complex fullstack app](#a-more-complex-fullstack-app)
-  - [Before you begin…](#before-you-begin)
-  - [Okay… now you can deploy:](#okay-now-you-can-deploy)
+- [Deploy A Simple No-Database App](#deploy-a-simple-no-database-app)
+- [Deploy A Fullstack Server With A Database](#deploy-a-fullstack-server-with-a-database)
   - [Future changes to your code](#future-changes-to-your-code)
 
 
@@ -32,7 +30,9 @@ This will take you to your Dashboard where you can see existing deployments.
 
 ![alt text](./images/dashboard.png)
 
-## A simple backend app
+## Deploy A Simple No-Database App
+
+Follow these instructions to deploy an Express app that does NOT include a database. If your app includes a database, go to the next section.
 
 1. Make sure you are signed in using your GitHub account
 2. https://dashboard.render.com/ and click on <kbd>New +</kbd>
@@ -57,22 +57,8 @@ This will take you to your Dashboard where you can see existing deployments.
 
 ![alt text](./images/web-service-dashboard.png)
 
-## A more complex fullstack app
+## Deploy A Fullstack Server With A Database
 
-### Before you begin…
-Before deploying your application, update the following files in the `main` branch of your repo:
-
-* `src/index.js`
-
-  * [Here is an example of what your index.js file should look like](https://github.com/The-Marcy-Lab-School/react-express-auth/blob/main/src/index.js) (you can just copy/paste the contents of this file)
-  
-* `knexfile.js `
-  * [Here is an example of what your knexfile.js file should look like](https://github.com/The-Marcy-Lab-School/react-express-auth/blob/main/knexfile.js) (feel free to copy/paste the contents of this file) 
-  * **Changes**: Add a `production` field in the `module.exports` object (copy from `development`). Then, set the `connection` value to `process.env.PG_CONNECTION_STRING`  (you'll set this environment variable in step 4)
-  * **Why?** When you deploy your application, the `NODE_ENV` will be set to `production`. Your `knex.js` file uses this environment variable to select the appropriate configuration (the fallback is `'development'`). The `PG_CONNECTION_STRING` serves the same function as the object containing `host`, `port`, etc…. You'll see what this value looks like in step 4.
-* Push the changes to your remote repository.
-
-### Okay… now you can deploy:
 1. Make sure you have an account on https://render.com/ and that you sign in using Github
 
 2. Create a Postgres Server
