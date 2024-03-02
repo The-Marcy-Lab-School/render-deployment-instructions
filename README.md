@@ -46,8 +46,8 @@ Follow these instructions to deploy an Express app that does NOT include a datab
   * Branch - main
   * Root Directory - leave blank
   * Runtime - Node
-  * Build Command - leave blank
-  * Start Command - `cd server && npm i && node index.js` (if your server lives in a different folder, swap out the folder name)
+  * Build Command - `cd server && npm i` (if your server lives in a different folder, swap out the folder name)
+  * Start Command - `cd server && node index.js` (if your server lives in a different folder, swap out the folder name)
   * Instance Type - select **Free**
 * Select **Create Web Service**
 
