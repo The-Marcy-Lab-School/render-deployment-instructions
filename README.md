@@ -44,10 +44,10 @@ Follow these instructions to deploy an Express app that does NOT include a datab
   * Name - the name of your app (it will appear in the URL that render gives you. For example: app-name-here.onrender.com)
   * Region - select US East (Ohio)
   * Branch - main
-  * Root Directory - `server/` or wherever your `index.js` file lives. Use `./` if it is in the root of your repo.
+  * Root Directory - leave blank
   * Runtime - Node
   * Build Command - leave blank
-  * Start Command - `node index.js`
+  * Start Command - `cd server && npm i && node index.js` (if your server lives in a different folder, swap out the folder name)
   * Instance Type - select **Free**
 * Select **Create Web Service**
 
